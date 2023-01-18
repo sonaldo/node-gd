@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Set up module
  * Copyright (c) 2020 Vincent Bruijn <vebruijn@gmail.com>
@@ -5,9 +7,9 @@
  * MIT Licensed
  */
 
-import gd from './lib/node-gd.js';
-import GifAnim from './lib/GifAnim.js';
+const bindings = require('./lib/node-gd');
+const GifAnim = require('./lib/GifAnim');
 
-gd.GifAnim = GifAnim;
+bindings.GifAnim = GifAnim;
 
-export default gd;
+module.exports = bindings;
